@@ -5,7 +5,7 @@ import Header from "../components/Header";
 import MessagesArea from "../components/MessagesArea";
 import Footer from "../components/Footer";
 
- const socket = io( import.meta.env.backendurl, {
+ const socket = io( import.meta.env.VITE_BACKEND_URL, {
   transports: ["websocket"], // optional but stable
   reconnection: true,
 })
