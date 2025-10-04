@@ -48,7 +48,7 @@ const App = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen max-w-md mx-auto border border-gray-700 rounded-lg overflow-hidden">
+    <div className="flex flex-col h-[90vh] max-w-md mx-auto border border-gray-700 rounded-lg overflow-hidden">
       <Header isConnected={isConnected} />
       <MessagesArea messages={messages} isLoading={isLoading} />
       <Footer
