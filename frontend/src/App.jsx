@@ -5,10 +5,14 @@ import Header from "../components/Header";
 import MessagesArea from "../components/MessagesArea";
 import Footer from "../components/Footer";
 
- const socket = io( import.meta.env.VITE_BACKEND_URL, {
-  transports: ["websocket"], // optional but stable
+const socket = io(import.meta.env.VITE_BACKEND_URL, {
+  transports: ["websocket"],
   reconnection: true,
-})
+  reconnectionAttempts: Infinity,
+  reconnectionDelay: 2000,
+  reconnectionDelayMax: 10000,
+  timeout: 20000,
+});
 
 const App = () => {
   const [messages, setMessages] = useState([]);
